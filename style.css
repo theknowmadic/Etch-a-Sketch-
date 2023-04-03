@@ -14,10 +14,4 @@
     border: 1px solid black;
     text-align: center;
     height: 10px;
-    
-}
-
-.my-color.class {
-    display: grid;
-    background-color: blue;
 }
