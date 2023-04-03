@@ -31,7 +31,7 @@ const makeRows = (grid) => {
 
 makeRows()
 
-
+// EventListener Button
 button.addEventListener('click', () => {
     let userSize = Number(prompt("Choose the amount of boxes you want", "1-100"))
 
