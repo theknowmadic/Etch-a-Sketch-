@@ -42,7 +42,7 @@ makeRows()
 
 // EventListener Button
 button.addEventListener('click', () => {
-    let userSize = Number(prompt("Choose the amount of boxes you want", "1-100"))
+    let userSize = Number(prompt("Choose the amount of boxes you want and begin drawing!", "1-100"))
 
     while (userSize > 100) {
         userSize = Number(prompt("Ops! Pick a smaller number less than 100", "1-100"))
