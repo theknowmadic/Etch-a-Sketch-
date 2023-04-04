@@ -1,7 +1,14 @@
 const button = document.querySelector('.popup');
 const container = document.querySelector('.container')
 
+// Function that creates random RGB value
+const createRandomRGB = () => {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
 
+    return { r, g, b}
+}
 
 // Function that uses two for-loops to create a grid
 const makeRows = (grid) => {
@@ -13,14 +20,16 @@ const makeRows = (grid) => {
         row.classList.add('grid-row')
 
     for (let j = 0; j < grid; j++) {
+        const {r, g, b} = createRandomRGB()
         const widthAndHeight = 960 / grid
         const gridBox = document.createElement('div')
         gridBox.classList.add('grid-box')
         gridBox.style.width = `${widthAndHeight}px`
         gridBox.style.height = `${widthAndHeight}px`
-        // Event listener
+        // Event listener to change background color
         gridBox.addEventListener('mouseover', () => { 
-            gridBox.style.backgroundColor = 'black'
+            const bgColor = "rgb(" + r + "," + g + "," + b + ")"; 
+            gridBox.style.background = bgColor
         })
         row.appendChild(gridBox)
          }
